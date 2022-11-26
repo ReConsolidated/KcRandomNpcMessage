@@ -1,0 +1,11 @@
+name: KcRandomNpcMessage
+version: '${project.version}'
+main: io.github.reconsolidated.kcrandomnpcmessage.KcRandomNpcMessage
+api-version: 1.17
+authors: [ KcAnka ]
+commands:
+  krnm:
+    description: KcRandomNpcMessage command
+    aliases: [ kcrandomnpcmessage ]
+    permission: krnm.use
+    permission-message: You don't have permission to use this command.
