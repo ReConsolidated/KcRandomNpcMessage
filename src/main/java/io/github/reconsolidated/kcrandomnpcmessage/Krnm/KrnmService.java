@@ -63,6 +63,7 @@ public class KrnmService {
         if (messages == null) {
             throw new InformException("Holder " + holder + " does not exist");
         }
-        return messages.get((int) (Math.random() * messages.size()));
+        Random random = new Random();
+        return messages.get(random.nextInt(messages.size()));
     }
 }
