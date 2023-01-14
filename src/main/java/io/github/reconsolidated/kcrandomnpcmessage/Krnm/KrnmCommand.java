@@ -11,5 +11,6 @@ public class KrnmCommand extends CommandManager {
         addSubCommand(new KrnmShowCommand(krnmService));
         addSubCommand(new KrnmDisplayCommand(krnmService));
         addSubCommand(new KrnmRemoveCommand(krnmService));
+        addSubCommand(new KrnmReloadCommand(krnmService));
     }
 }

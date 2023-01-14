@@ -12,9 +12,7 @@ public class KrnmService {
 
     public KrnmService(Plugin plugin) {
         this.plugin = plugin;
-        plugin.getConfig().getKeys(false).forEach(holder -> {
-            holders.put(holder, plugin.getConfig().getStringList(holder));
-        });
+        reload();
     }
 
     private void save() {
@@ -65,5 +63,13 @@ public class KrnmService {
         }
         Random random = new Random();
         return messages.get(random.nextInt(messages.size()));
+    }
+
+    public void reload() {
+        holders.clear();
+        plugin.reloadConfig();
+        plugin.getConfig().getKeys(false).forEach(holder -> {
+            holders.put(holder, plugin.getConfig().getStringList(holder));
+        });
     }
 }
